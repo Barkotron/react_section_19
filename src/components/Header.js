@@ -1,4 +1,4 @@
-import { authActions } from "../store";
+import { authActions } from "../store/authSlice.js";
 import classes from "./Header.module.css";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -7,7 +7,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const logoutHandler = (event) => {
-    dispatch(authActions.logout());
+    dispatch(authActions.logout())
   };
 
   return (
